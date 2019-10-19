@@ -1,0 +1,44 @@
+page-set-timer {
+    // .ami-heading{
+    //     text-align: center;
+    //     font-size: 33px;
+    //     padding: 10px 0px 20px 0px;
+    // }
+
+    .ami-heading2{
+        text-align: center;
+        font-size: 20px;
+        padding: 10px 0px 20px 0px;
+    }
+
+    .display-time{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        padding: 1px 0;
+        border: 1px solid #488aff;
+        border-radius: 5px;
+        height: 37px;
+        margin-top: 4px;
+    }
+
+    .time-wrap{
+        border: 1px solid #488aff;
+        height: 37px;
+        margin-top: 4px;
+        border-radius: 2px;
+        text-align: center;
+        padding: 6px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .para-wrap{
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .cancel-btn{
+        background: red;
+    }
+}

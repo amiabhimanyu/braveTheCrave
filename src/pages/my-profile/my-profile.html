@@ -1,0 +1,58 @@
+<!--
+  Generated template for the MyProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 class="ami-heading">My Profile</h1>
+  <div class="quit-wrap">
+    <p class="ami-write">I want to quit because...</p>
+    <ion-item>
+      <ion-textarea placeholder="Reason to be entered by user..." [(ngModel)]="reason" (ngModelChange)="checkValid()"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div *ngIf="isInvalid" class="invalid">Invalid input</div>
+
+  <div class="quit-wrap">
+    <p class="ami-write">Set my quit date</p>
+    <ion-item>
+      <ion-label>Select date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YY" pickerFormat="MM/DD/YY" max="{{maxDate}}" min="{{minDate}}"
+        [(ngModel)]="quitDate" (ngModelChange)="checkValidDate()"></ion-datetime>
+    </ion-item>
+  </div>
+
+  <div *ngIf="isInvalidDate" class="invalid">Invalid input</div>
+
+  <div class="quit-wrap">
+    <p>Tip: Don’t set a quit date more than two weeks out.</p>
+  </div>
+
+  <button ion-button block (click)="submitDate()">Submit</button>
+
+  <ion-grid class="ami-bottom" style="position: relative !important;">
+    <ion-row>
+      <ion-col col-6><button ion-button block (click)="gotohome()">Back to home page</button></ion-col>
+      <ion-col col-6><button ion-button block (click)="gotomystats()">My Stats</button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <!-- <ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6><button ion-button block (click)="gotohome()">Back to home page</button></ion-col>
+                <ion-col col-6><button ion-button block (click)="gotomystats()">My Stats</button></ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar> -->
+</ion-footer>

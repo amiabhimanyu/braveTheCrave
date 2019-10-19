@@ -1,0 +1,35 @@
+page-brave-no {
+    // .ami-heading{
+    //     text-align: center;
+    //     font-size: 33px;
+    //     padding: 30px 0px 30px 0px;
+    // }
+    .ami-para{
+        text-align: center;
+        font-size: 25px;
+        line-height: 36px;
+    }
+    .ami-bottom{
+        // position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    h4{
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .submit-btn{
+        margin-bottom: 40px;
+    }
+
+    .invalid{
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 0 10px;
+        margin: 10px 0px;
+    }
+}

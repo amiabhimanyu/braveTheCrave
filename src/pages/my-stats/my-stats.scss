@@ -1,0 +1,23 @@
+page-my-stats {
+    // .ami-heading{
+    //     text-align: center;
+    //     font-size: 40px;
+    //     padding: 10px 0px 20px 0px;
+    // }
+    
+    .ami-bottom{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .item-md{
+        background-color: #eaeaea;
+        margin-bottom: 12px;
+    }
+    ion-badge{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

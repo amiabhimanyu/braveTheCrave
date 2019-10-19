@@ -1,0 +1,43 @@
+page-why-i-gave-in {
+    .ami-table{
+        background: #FFE2D1;
+        .col {
+            // border: 1px solid #666 !important;
+            border-bottom: 1px solid #666 !important;
+            border-left: 1px solid #666 !important
+        }
+
+        .col:last-child{
+            border-right: 1px solid #666 !important
+        }
+    }
+
+    .ami-table1{
+        background: #488aff;
+        color: #fff;
+        .col {
+            // border: 1px solid #666 !important;
+            border-bottom: 1px solid #666 !important;
+            border-left: 1px solid #666 !important;
+            border-top: 1px solid #666 !important;
+        }
+
+        .col:last-child{
+            border-right: 1px solid #666 !important
+        }
+    }
+    
+    // .ami-heading{
+    //     text-align: center;
+    //     font-size: 40px;
+    //     padding: 10px 0px 20px 0px;
+    // }
+   
+    .ami-bottom{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}

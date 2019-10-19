@@ -1,0 +1,25 @@
+page-activity-list {
+    ion-icon{
+        float:right;
+    }
+
+    .label-md , .label-ios{
+        margin: 13px 0px 13px 0;
+        white-space: normal;
+    }
+
+    // .ami-heading{
+    //     text-align: center;
+    //     font-size: 40px;
+    //     padding: 40px 0px 20px 0px;
+    // }
+
+    .own{
+        ion-icon {
+            display: inline-block;
+            font-size: 30px;
+            margin-left: 30px;
+            color: #488aff;
+        }
+    }
+}

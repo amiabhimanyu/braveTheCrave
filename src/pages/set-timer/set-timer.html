@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Set Timer</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h1 class="ami-heading">Set a timer for the activity</h1>
+    <!-- <ion-item>
+        <ion-label>Start Time</ion-label>
+        <ion-datetime displayFormat="mm" [(ngModel)]="minute"></ion-datetime>
+    </ion-item> -->
+    <!-- <ion-list>
+        <ion-row>
+            <ion-col col-8>
+                <button ion-button block (click)="selectANumber()" [disabled]="isStart" [ngClass]="{'disableclassbtn': isStart==true}">Set Minutes</button>
+            </ion-col>
+            <ion-col col-4>
+                <div class="time-wrap">
+                    {{displayMinute}}
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+    <div class="display-time">
+        {{minuteText}} : {{secondTest}}
+    </div> -->
+    <ion-list>
+        <ion-row>
+            <ion-col col-6>
+                <button ion-button block (click)="selectANumber()" [disabled]="isStart" [ngClass]="{'disableclassbtn': isStart==true}">Set Minutes</button>
+            </ion-col>
+            <ion-col col-6>
+                <div class="display-time">
+                    {{minuteText}} : {{secondTest}}
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+    
+    <ion-list>
+        <ion-row>
+            <ion-col col-6>
+                <button ion-button block (click)="startTimer()" [disabled]="isStart" [ngClass]="{'disableclassbtn': isStart==true}">Start Timer</button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button block class="cancel-btn" (click)="cancleTimer()" [disabled]="!isStart" [ngClass]="{'disableclassbtn': isStart!==true}">Cancel Timer</button>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+    
+    <p class="para-wrap">Start with 5 minutes. <br> The next time, wait a few more minutes, and so on.<br> It might seem hard at first, but the more separation you can put between your crave and your vape pen, the more you will break the glue that holds them together.</p>
+    <!-- <button (click)="gotoBrave()">Goto Next Screen</button> -->
+</ion-content>

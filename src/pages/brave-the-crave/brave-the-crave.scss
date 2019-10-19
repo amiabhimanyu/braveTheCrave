@@ -1,0 +1,48 @@
+page-brave-the-crave {
+    // .ami-heading{
+    //     text-align: center;
+    //     font-size: 28px;
+    //     padding: 10px 0px 20px 0px;
+    // }
+
+    .own {
+        ion-icon {
+            display: inline-block;
+            font-size: 30px;
+            margin-left: 30px;
+            color: #488aff;
+        }
+    }
+
+    .category-wrap {
+        background: #eee;
+        border-bottom: 1px solid;
+        white-space: normal;
+        .item-inner{
+            border-bottom: 0px solid !important;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .reason-wrap {
+            padding-left: 15px;
+            padding-top: 5px;
+            background: #c3c3ca;
+            white-space: normal;
+            img{
+                height: 20px;
+                margin-left: 6px;
+            }
+        }
+
+        ion-icon{
+            position: absolute;
+            top: 0;
+            right: 5px;
+            color: #488aff;
+            font-size: 27px;
+        }
+    }
+}

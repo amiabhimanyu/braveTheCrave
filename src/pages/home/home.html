@@ -1,0 +1,45 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding class="home-bg">
+  <h1 class="ami-heading">Brave the Crave!</h1>
+
+  <ion-card>
+   
+    <ion-card-content>
+      <h2 class="no-of-days">{{vapeFree}} days vape free</h2>
+      <p class="ami-write">My Quit Date</p>
+      <p class="ami-write1">{{quitDate}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ami-card">
+  
+    <ion-card-content *ngIf="isReasonPresent">
+      <h2 class="no-of-days">I want to quit because</h2>
+      <p class="ami-write">{{quitReason}}</p>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid class="ami-btn"> 
+    <ion-row>
+      <ion-col col-6><button ion-button block (click)="gotobravethecrave()">Brave the<br> crave</button></ion-col>
+      <ion-col col-6><button ion-button block (click)="gotomyprofile()">My Profile <br>& Stats</button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6><button ion-button block (click)="gotoresources()">Resources</button></ion-col>
+      <ion-col col-6><button ion-button block (click)="gotolearnquit()">Learn to<br> Quit</button></ion-col>
+    </ion-row>
+    
+  </ion-grid>
+  <!--<button (click)="gotoBrave()">Brave the Crave</button>
+  <button (click)="gotoProfile()">My Profile & Stats</button>
+  <button (click)="gotoResources()">Resorces</button>
+  <button (click)="gotoQuit()">Learn to Quit</button>-->
+</ion-content>

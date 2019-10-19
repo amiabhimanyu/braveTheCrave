@@ -1,0 +1,104 @@
+<!--
+  Generated template for the ResourcesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>Resources</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home-bg">
+    <h1 class="ami-heading">Resources</h1>
+    <a href="sms:88709?body=DITCHJUUL">
+        <ion-card class="ami-list" (click)="sendAMessage()">
+            <ion-card-content>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-10>
+                            <p class="ami-para"><b>TEXT</b><br>"DITCHJUUL" to 88709 </p>
+                        </ion-col>
+                        <ion-col col-2>
+                            <ion-icon name="text"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+        </ion-card>
+    </a>
+
+    <a href="tel:8007848669">
+        <ion-card class="ami-list">
+            <ion-card-content>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-10>
+                            <p class="ami-para"><b>Call a Quitline</b><br>Talk with trained counsellor<br>1-800-QUIT-NOW
+                                (800-784-8669) </p>
+                        </ion-col>
+                        <ion-col col-2>
+                            <ion-icon name="call"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+        </ion-card>
+    </a>
+
+    <ion-card class="ami-list" (click)="openInstagram()">
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-10>
+                        <p class="ami-para"><b>SmokefreeUS</b><br> on Instagram </p>
+                    </ion-col>
+                    <ion-col col-2>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+
+    <a href="sms:47848?body=QUIT">
+        <ion-card class="ami-list">
+            <ion-card-content>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-10>
+                            <p class="ami-para"><b>Daily Challenges</b><br>Text QUIT to 47848
+                                <!-- <br>Find your quityspiration here -->
+                            </p>
+                        </ion-col>
+                        <ion-col col-2>
+                            <ion-icon name="text"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+        </ion-card>
+    </a>
+
+    <ion-card class="ami-list">
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-10>
+                        <p class="ami-para"><b>Talk to your doctor</b><br>or trusted adult</p>
+                    </ion-col>
+                    <ion-col col-2>
+                        <ion-icon name="chatbubbles"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12><button ion-button block (click)="gotoHome()">Back to home page</button></ion-col>
+
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,65 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// .ion-page > ion-content {
+//     background: #009CD6;
+// }
+
+// .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+//     background-image: none;
+// }
+
+// .header-ios::after, .tabs-ios[tabsPlacement="top"] > .tabbar::after, .footer-ios::before, .tabs-ios[tabsPlacement="bottom"] > .tabbar::before {
+//     background-image: none;
+// }
+
+// .toolbar-background-md, .toolbar-background-ios {
+//     background: #009CD6;
+// }
+
+// .toolbar-title-md, .toolbar-title-ios {
+//     color: #FFE2D1;
+// }
+
+// .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+//     color: #FFE2D1;
+// }
+
+// .bar-button-default-ios, .bar-button-clear-ios-default, .bar-button-ios-default {
+//     color: #FFE2D1;
+// }
+
+// .button-md, .button-ios{
+//     background-color: #FFE2D1;
+//     color: #333;
+// }
+
+.ami-heading{
+    // color: #FFE2D1;
+
+    text-align: center;
+    font-size: 25px;
+    padding: 40px 0px 20px 0px;
+}
+
+.home-bg{
+    background: url(../assets/imgs/home_bg.jpg) no-repeat;
+	background-size: cover;
+}
+
+.alert-md .alert-title, .alert-ios .alert-title {
+    text-align: center;
+}

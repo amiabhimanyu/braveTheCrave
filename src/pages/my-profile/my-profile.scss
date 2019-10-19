@@ -1,0 +1,41 @@
+page-my-profile {
+    // .ami-heading{
+    //     text-align: center;
+    //     font-size: 40px;
+    //     padding: 10px 0px 20px 0px;
+    // }
+    .ami-write{
+        font-size: 23px;
+       
+    }
+    .ami-bottom{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    // ion-textarea {
+    //     border: 1px solid #eee;
+    //     background: #eee;
+    //     border-radius: 3px;
+    // }
+    .quit-wrap{
+        border: 1px solid #eee;
+        background: #eee;
+        border-radius: 3px;
+        text-align: center;
+        margin-bottom: 15px;
+        ion-item{
+            background: #eee;
+        }
+    }
+
+    .invalid{
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 0 10px;
+        margin: 10px 0px;
+    }
+}

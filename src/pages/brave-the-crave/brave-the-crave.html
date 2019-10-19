@@ -1,0 +1,81 @@
+<!--
+  Generated template for the BraveTheCravePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>Brave The Crave</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h1 class="ami-heading">Select the reason why you want to vape right now </h1>
+    <!-- <ion-list>
+        <ion-item *ngFor="let category of allReason">
+            <ion-label *ngIf="category.id !== 4">{{category.category_name}}</ion-label>
+            <ion-select *ngIf="category.id !== 4" [(ngModel)]="selectedReason"
+                (ngModelChange)="gotoActivity(category.id)">
+                <ng-container *ngFor="let reason of category.allReasons">
+                    <ion-option value="{{reason.id}}">{{reason.reason_name}} <ion-icon ios="ios-create" md="ios-create"></ion-icon></ion-option>
+                </ng-container>
+            </ion-select>
+        </ion-item>
+    </ion-list> -->
+
+    <ion-list>
+        <ion-row *ngFor="let category of allReason; let i=index" (click)="toggleGroup(i)"> 
+            <ion-item class="category-wrap">
+                <h4>{{category.category_name}}</h4>
+                <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+                <ng-container *ngFor="let reason of category.allReasons">
+                    <ion-row class="reason-wrap" *ngIf="isGroupShown(i)">
+                        <ion-col (click)="activityGateway(category.id, reason.id)" *ngIf="category.id !== 4">
+                            {{reason.reason_name}}
+                            <img *ngIf="category.id === 1" src="{{reason.image}}" alt="">
+                            <!-- <span><p>{{reason.reason_name}}</p></span><span><img *ngIf="category.id === 1" src="{{reason.image}}" alt=""></span> -->
+                        </ion-col>
+
+                        <ion-col col-8 (click)="activityGateway(category.id, reason.id)" *ngIf="category.id === 4">
+                            <p>{{reason.reason_name}}</p>
+                        </ion-col>
+                        <ion-col col-2 *ngIf="category.id === 4">
+                            <ion-icon ios="ios-create" md="ios-create" (click)="updateReason(reason)"></ion-icon>
+                        </ion-col>
+                        <ion-col col-2 *ngIf="category.id === 4">
+                            <ion-icon ios="md-trash" md="md-trash" (click)="deleteReason(reason)"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ng-container>
+            </ion-item>
+        </ion-row>
+    </ion-list>
+
+    <!-- <h4>Add your own</h4>
+
+    <ion-list class="own">
+        <ng-container *ngFor="let category of allReason">
+            <ion-row>
+                <ng-container *ngIf="category.id === 4">
+                    <ion-item *ngFor="let reason of category.allReasons">
+                        <ion-row>
+                            <ion-col col-8 (click)="activityGateway(category.id, reason.id)">
+                                {{reason.reason_name}}
+                            </ion-col>
+                            <ion-col col-2>
+                                <ion-icon ios="ios-create" md="ios-create" (click)="updateReason(reason)"></ion-icon>
+                            </ion-col>
+                            <ion-col col-2 >
+                                <ion-icon ios="md-trash" md="md-trash" (click)="deleteReason(reason)"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                    </ion-item>
+                </ng-container>
+            </ion-row>
+        </ng-container>
+    </ion-list> -->
+    <button ion-button block (click)="addOwn()">Add your own reason</button>
+    <!-- <button ion-button block (click)="gotoActivity()">next</button> -->
+
+</ion-content>

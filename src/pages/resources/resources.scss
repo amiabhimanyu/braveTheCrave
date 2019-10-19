@@ -1,0 +1,36 @@
+page-resources {
+    // .ami-heading{
+    //     text-align: center;
+    //     font-size: 40px;
+    //     padding: 10px 0px 20px 0px;
+    // }
+    .ami-para{
+        font-size: 15px;
+        text-align: center;
+    }
+    .ami-list{
+
+        ion-icon {
+            display: inline-block;
+            font-size: 3.5em;
+            color: #00b8c9;
+           
+        }
+        p{
+            color:#000;
+            // font-weight: 600;
+        }
+
+        .card-content-md, .card-content-ios {
+            padding: 0 16px;
+        }
+    }
+    .ami-list{
+        background: #eeeded;
+    }
+    
+    a {
+        text-decoration: none !important;
+    }
+    
+}
