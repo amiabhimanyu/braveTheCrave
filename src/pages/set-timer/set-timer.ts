@@ -140,7 +140,9 @@ export class SetTimerPage {
                     .catch(e => console.log('Insert Error' + JSON.stringify(e)));
                 })
                 .catch(e => console.log(e));
-                this.notiID = Math.ceil(Math.random() * 10);
+                let id = parseInt(localStorage.getItem('notiId'));
+                this.notiID = id + 1;
+                localStorage.setItem('notiId', this.notiID);
                 localStorage.setItem('currentNotiId', this.notiID);
                 this.localNotifications.schedule({
                     id: this.notiID,
@@ -230,6 +232,7 @@ export class SetTimerPage {
         this.secondTest = '00';
         console.log("Noti id", localStorage.getItem('currentNotiId'))
         this.localNotifications.cancel(localStorage.getItem('currentNotiId'));
+        localStorage.setItem('isSchedule','');
         localStorage.setItem('currentNotiId','');
     }
 }

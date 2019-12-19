@@ -1,43 +1,90 @@
 page-why-i-gave-in {
-    .ami-table{
-        background: #FFE2D1;
-        .col {
-            // border: 1px solid #666 !important;
-            border-bottom: 1px solid #666 !important;
-            border-left: 1px solid #666 !important
-        }
+  .scroll-content {
+    position: fixed !important;
+    position: fixed !important;
+    margin-top: 56px !important;
+    background-color: #ffe2d1 !important;
+    //background-color: #fff !important;
+    margin-bottom: 56px !important;
+    /*overflow-y: hidden !important;*/
+  }
 
-        .col:last-child{
-            border-right: 1px solid #666 !important
-        }
+  .grid{
+    padding: 0px !important;
+  }  
+
+  .ami-table {
+    background: #FFE2D1;
+    //background-color: #fff !important;
+
+    .col {
+      // border: 1px solid #666 !important;
+      border-bottom: 1px solid #666 !important;
+      border-left: 1px solid #666 !important;
+      padding: 12px 12px !important;
     }
 
-    .ami-table1{
-        background: #488aff;
-        color: #fff;
-        .col {
-            // border: 1px solid #666 !important;
-            border-bottom: 1px solid #666 !important;
-            border-left: 1px solid #666 !important;
-            border-top: 1px solid #666 !important;
-        }
+    .col:last-child {
+      border-right: 1px solid #666 !important
+    }
+  }
 
-        .col:last-child{
-            border-right: 1px solid #666 !important
-        }
+  .ami-table1 {
+    background: #488aff;
+    color: #fff;
+
+    .col {
+      // border: 1px solid #666 !important;
+      border-bottom: 1px solid #666 !important;
+      border-left: 1px solid #666 !important;
+      border-top: 1px solid #666 !important;
     }
-    
-    // .ami-heading{
-    //     text-align: center;
-    //     font-size: 40px;
-    //     padding: 10px 0px 20px 0px;
-    // }
-   
-    .ami-bottom{
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
+
+    .col:last-child {
+      border-right: 1px solid #666 !important
     }
+  }
+
+  // .ami-heading{
+  //     text-align: center;
+  //     font-size: 40px;
+  //     padding: 10px 0px 20px 0px;
+  // }
+
+ /* @media only screen and (min-device-width : 320px) and (max-device-width : 377px) {
+    .ami-scroll{
+      height: 440px !important;
+      overflow-y: scroll !important;
+    }
+    .ami-heading{
+      display:none !important;
+    }
+  }
+
+  @media only screen and (min-device-width : 378px){
+    .ami-scroll{
+      height: 540px !important;
+      overflow-y: scroll !important;
+    }
+    .ami-heading{
+      display:none !important;
+    }
+  }  */
+
+  .ami-scroll{
+    margin-top: 25px !important;
+    overflow-y: scroll !important;
+  }
+  
+.header {
+  margin-bottom: -10px;
+}
+
+  .ami-bottom {
+    position: fixed !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
 }

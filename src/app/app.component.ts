@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav, Events } from 'ionic-angular';
+import { Platform, Nav, Events, ToastController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Keyboard } from '@ionic-native/keyboard';
@@ -8,6 +8,8 @@ import { HomePage } from '../pages/home/home';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { DidYouBravePage } from '../pages/did-you-brave/did-you-brave';
+import { App } from 'ionic-angular';
+
 
 import moment from 'moment';
 
@@ -18,6 +20,7 @@ export class MyApp {
     @ViewChild(Nav) nav: Nav;
     // rootPage: any = HomePage;
     rootPage: any;
+    isSubmit:boolean = false;
     reasonCategory: any[] = ['Emotional', 'Social', 'Withdrawal', 'My personal reason'];
     reason: any[] = [
         {
@@ -169,31 +172,36 @@ export class MyApp {
             message: 'The amount of nicotine in one standard pod is roughly equal to the amount of nicotine in a pack of cigarettes, or about 200 puffs.'
         },
     ]
-    
+
     constructor(
-        platform: Platform,
+        public platform: Platform,
         statusBar: StatusBar,
         splashScreen: SplashScreen,
         private sqlite: SQLite,
         public localNotifications: LocalNotifications,
         public events: Events,
-        private keyboard: Keyboard) {
+        private keyboard: Keyboard,
+        public app: App,
+        public toastCtrl: ToastController) {
         platform.ready().then(() => {
             this.localNotifications.on('click').subscribe(notification => {
                 console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", notification.data)
-                localStorage.setItem('isSchedule','');
-                localStorage.setItem('currentNotiId','');
+                console.log("Data:",localStorage.getItem('isSchedule'), localStorage.getItem('currentNotiId'), notification.id)
                 setTimeout(() => {
-                    this.nav.push(DidYouBravePage,{ data : JSON.stringify(notification.data) })
+                    if(localStorage.getItem('isSchedule') === 'true' && parseInt(localStorage.getItem('currentNotiId')) === parseInt(notification.id)){
+                        localStorage.setItem('isSchedule','');
+                        localStorage.setItem('currentNotiId','');
+                        this.nav.push(DidYouBravePage,{ data : JSON.stringify(notification.data) })
+                    }
                 }, 300);
             });
 
             this.localNotifications.on('trigger').subscribe(notification => {
-                console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Trigger", notification.data)
-                localStorage.setItem('isSchedule','');
-                localStorage.setItem('currentNotiId','');
+                // console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Trigger", notification.data)
                 setTimeout(() => {
                     if(sessionStorage.getItem('isLoaded') === 'true'){
+                        localStorage.setItem('isSchedule','');
+                        localStorage.setItem('currentNotiId','');
                         this.nav.push(DidYouBravePage,{ data : JSON.stringify(notification.data) })
                     }
                 }, 300);
@@ -216,12 +224,15 @@ export class MyApp {
                 localStorage.setItem('quitDate', date);
                 localStorage.setItem('lastVapeDate', date);
                 localStorage.setItem('quitReason', '');
+                localStorage.setItem('notiId', '0');
                 events.publish('LoadFirst', date);
                 this.createDB();
                 setTimeout(() => {
                     this.insertTable();
                 }, 500)
             }
+
+
             // this.handleLoaclNotification();
 
             setTimeout(() => {
@@ -229,7 +240,7 @@ export class MyApp {
             }, 200);
 
             setTimeout(() => {
-                sessionStorage.setItem('isLoaded','true');
+                sessionStorage.setItem('isLoaded', 'true');
             }, 1000)
 
             // this.keyboard.onKeyboardWillShow().subscribe(() => {
@@ -238,6 +249,43 @@ export class MyApp {
             // this.keyboard.onKeyboardHide().subscribe(() => {
             //     events.publish('keyboardClose');
             // });
+
+
+            // Hardware back button handling
+
+            // this.platform.registerBackButtonAction(() => {
+            //     // Catches the active view
+            //     // let nav = this.app.getActiveNavs()[0];
+            //     let activeView = this.nav.getActive();
+            //     console.log("Back button click")
+            //     console.log(activeView.name, activeView.component.name);
+            //     // Checks if can go back before show up the alert
+            //     if (activeView.name === 'BraveYesPage') {
+            //         this.nav.setRoot(HomePage);
+            //     }
+            //     else if (activeView.name === 'DidYouBravePage') {
+            //         const toast = this.toastCtrl.create({
+            //             message: 'Please take an action',
+            //             duration: 3000
+            //         });
+            //         toast.present();
+            //     }
+            //     else if (activeView.name === 'BraveNoPage') {
+            //         if(this.isSubmit){
+            //             this.nav.setRoot(HomePage);
+            //         }
+            //         else{
+            //             this.nav.pop();
+            //         }
+            //     }
+            //     else if (activeView.name === 'HomePage') {
+            //         this.platform.exitApp();
+            //     }
+            //     else{
+            //         this.nav.pop();
+            //     }
+            // });
+
         });
     }
 

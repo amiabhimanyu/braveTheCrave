@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Platform } from 'ionic-angular';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { HomePage } from '../home/home';
+
+import { Navbar } from 'ionic-angular';
 
 /**
  * Generated class for the BraveYesPage page.
@@ -16,11 +18,25 @@ import { HomePage } from '../home/home';
 })
 export class BraveYesPage {
 
+    @ViewChild(Navbar) navBar: Navbar;
+
+    public unregisterBackButtonAction: any;
     message:any;
     constructor(
         public navCtrl: NavController, 
         public navParams: NavParams,
-        public sqlite: SQLite) {
+        public sqlite: SQLite,
+        public platform: Platform) {
+    }
+
+    ionViewDidLoad(){
+        this.setBackButtonAction();
+        this.initializeBackButtonCustomHandler();
+    }
+
+    ionViewDidLeave() {
+        // Unregister the custom back button action for this page
+        this.unregisterBackButtonAction && this.unregisterBackButtonAction();
     }
 
     ionViewWillEnter(){
@@ -41,4 +57,16 @@ export class BraveYesPage {
     goHome(){
         this.navCtrl.setRoot(HomePage);
     }
+
+    setBackButtonAction(){
+        this.navBar.backButtonClick = () => {
+            this.navCtrl.setRoot(HomePage);
+        }
+    }
+
+    initializeBackButtonCustomHandler() {
+        this.unregisterBackButtonAction = this.platform.registerBackButtonAction((event) => {
+            this.navCtrl.setRoot(HomePage);
+        });
+    }  
 }

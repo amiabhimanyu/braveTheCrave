@@ -5,53 +5,75 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar>
-        <ion-title>Why I Gave In</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Why I Gave In</ion-title>
+  </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <h1 class="ami-heading">Why I Gave In</h1>
-    <ion-grid>
-        <ion-row class="ami-table1">
-            <ion-col col-3>
-                <div>
-                    <b>Date Time</b>
-                </div>
-            </ion-col>
-            <ion-col col-5 style="width: 37.5%;max-width: 37.5%;">
-                <div>
-                    <b>Activity</b>
-                </div>
-            </ion-col>
-            <ion-col col-5 style="width: 37.5%;max-width: 37.5%;">
-                <div>
-                    <b>Why I Gave In</b>
-                </div>
-            </ion-col>
-        </ion-row>
+<ion-header class="amiheader header-md" style=" margin-bottom: -19px !important;  margin-top: 56px !important;">
+  <ion-row class="ami-table1">
+    <ion-col col-3 style="padding-left: 12px;">
+      <div>
+        <b>Date Time</b>
+      </div>
+    </ion-col>
+    <ion-col col-5 style="width: 37.5%;max-width: 37.5%;padding-left: 12px;">
+      <div>
+        <b>Activity</b>
+      </div>
+    </ion-col>
+    <ion-col col-5 style="width: 37.5%;max-width: 37.5%;padding-left: 12px;">
+      <div>
+        <b>Why I Gave In</b>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-header>
 
-        <ion-row *ngFor="let item of allList" class="ami-table">
-            <ion-col col-3>
-                <div>
-                    <!-- <b>{{item.date}}<br>{{item.time}}</b> -->
-                    {{item.date}}<br>{{item.time}}
-                </div>
-            </ion-col>
-            <ion-col col-5 style="width: 37.5%;max-width: 37.5%;">
-                <div>
-                    <!-- <b>{{item.name}}</b> -->
-                    {{item.name}}
-                </div>
-            </ion-col>
-            <ion-col col-5 style="width: 37.5%;max-width: 37.5%;">
-                <div>
-                    <!-- <b>{{item.why}}</b> -->
-                    {{item.why}}
-                </div>
-            </ion-col>
-        </ion-row>
-        <!-- <ion-row>
+<ion-content>
+  <!--<h1 class="ami-heading">Why I Gave In</h1>-->
+  <ion-grid>
+    <!--<ion-row class="ami-table1">
+      <ion-col col-3>
+        <div>
+          <b>Date Time</b>
+        </div>
+      </ion-col>
+      <ion-col col-5 style="width: 37.5%;max-width: 37.5%;">
+        <div>
+          <b>Activity</b>
+        </div>
+      </ion-col>
+      <ion-col col-5 style="width: 37.5%;max-width: 37.5%;">
+        <div>
+          <b>Why I Gave In</b>
+        </div>
+      </ion-col>
+    </ion-row>-->
+
+    <div class="ami-scroll">
+      <ion-row *ngFor="let item of allList" class="ami-table">
+        <ion-col col-3>
+          <div>
+            <!-- <b>{{item.date}}<br>{{item.time}}</b> -->
+            {{item.date}}<br>{{item.time}}
+          </div>
+        </ion-col>
+        <ion-col col-5 style="width: 37.5%;max-width: 37.5%;">
+          <div>
+            <!-- <b>{{item.name}}</b> -->
+            {{item.name}}
+          </div>
+        </ion-col>
+        <ion-col col-5 style="width: 37.5%;max-width: 37.5%;">
+          <div>
+            <!-- <b>{{item.why}}</b> -->
+            {{item.why}}
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- <ion-row>
           <ion-col>
             <div>
               <b>09/17/19</b>
@@ -69,11 +91,18 @@
             </ion-col>
         </ion-row> -->
 
-    </ion-grid>
-    <ion-grid class="ami-bottom">
-        <ion-row>
-            <ion-col col-12><button ion-button block (click)="gotohome()">Back to home page</button></ion-col>
-
-        </ion-row>
-    </ion-grid>
+  </ion-grid>
+  
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid class="ami-bottom" style="background-color: white;padding-top: 0px;position: fixed !important;
+  bottom: 0px !important;">
+    <ion-row>
+      <ion-col col-12><button ion-button block (click)="gotohome()">Back to home page</button></ion-col>
+
+    </ion-row>
+  </ion-grid>
+  </ion-toolbar>
+</ion-footer>

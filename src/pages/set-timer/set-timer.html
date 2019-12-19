@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-    <h1 class="ami-heading">Set a timer for the activity</h1>
+    <h1 class="ami-heading">Set a timer for the activity.</h1>
     <!-- <ion-item>
         <ion-label>Start Time</ion-label>
         <ion-datetime displayFormat="mm" [(ngModel)]="minute"></ion-datetime>
@@ -49,6 +49,8 @@
         </ion-row>
     </ion-list>
     
-    <p class="para-wrap">Start with 5 minutes. <br> The next time, wait a few more minutes, and so on.<br> It might seem hard at first, but the more separation you can put between your crave and your vape pen, the more you will break the glue that holds them together.</p>
+    <p class="para-wrap" *ngIf="!isStart">Start with 5 minutes. <br> The next time, wait a few more minutes, and so on.<br> It might seem hard at first, but the more separation you can put between your crave and your vape pen, the more you will break the glue that holds them together.</p>
+
+    <!-- <p class="para-wrap" *ngIf="isStart">A timer is already running in the background. <br> Please wait till it gets over or press "CANCEL" to cancel it forcefully.</p> -->
     <!-- <button (click)="gotoBrave()">Goto Next Screen</button> -->
 </ion-content>

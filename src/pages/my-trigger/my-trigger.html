@@ -1,286 +1,193 @@
 <ion-header>
-    <ion-navbar>
-        <ion-title>My Triggers</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>My Triggers</ion-title>
+  </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <h1 class="ami-heading">My Triggers</h1>
+<ion-header class="amiheader header-md" style=" margin-bottom: -19px !important;  margin-top: 56px !important;">
+  <ion-row class="ami-table1 row">
+      <ion-col class="col" col-8="" style="background: #488aff;z-index: 1;padding-left: 12px;">
+        <div>
+          <b>Trigger</b>
+        </div>
+      </ion-col>
+      <ion-col class="col" col-4="" style="background: #488aff;z-index: 1;padding-left: 12px;">
+        <div>
+          <b># of times</b>
+        </div>
+      </ion-col>
 
-    <ion-grid class="header">
-        <ion-row class="ami-table1">
-            <ion-col col-8>
-                <div>
-                    <b>Trigger</b>
-                </div>
-            </ion-col>
-            <ion-col col-4>
-                <div>
-                    <b># of times</b>
-                </div>
-            </ion-col>
+    </ion-row>
+</ion-header>
 
-        </ion-row>
-    </ion-grid>
-    <ion-grid>
+<ion-content>
+  <!--<h1 class="ami-heading">My Triggers</h1>
+
+  <ion-grid class="header">
+    <ion-row class="ami-table1">
+      <ion-col col-8 style="background: #488aff;z-index: 1;">
+        <div>
+          <b>Trigger</b>
+        </div>
+      </ion-col>
+      <ion-col col-4 style="background: #488aff;z-index: 1;">
+        <div>
+          <b># of times</b>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>-->
+
+  <div class="ami-scroll">
+      <ion-grid>
 
         <ion-row *ngFor="let trigger of allTrigger" class="ami-table">
-            <ion-col col-8>
-                <div>
-                    <!-- <b>{{trigger.name}}</b> -->
-                    {{trigger.name}}
-                </div>
-            </ion-col>
-            <ion-col col-4>
-                <div>
-                    <!-- <b>{{trigger.count}}</b> -->
-                    {{trigger.count}}
-                </div>
-            </ion-col>
+          <ion-col class="tgr-nm">
+            <div>
+              <!-- <b>{{trigger.name}}</b> -->
+              {{trigger.name}}
+            </div>
+          </ion-col>
+          <ion-col class="tgr-cnt">
+            <div>
+              <!-- <b>{{trigger.count}}</b> -->
+              {{trigger.count}}
+            </div>
+          </ion-col>
 
         </ion-row>
-        <!-- <ion-row>
-            <ion-col>
-                <div>
-                    <b>School</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>3</b>
-                </div>
-            </ion-col>
+
+        <!-- <ion-row class="ami-table">
+          <ion-col>
+            <div>
+              <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s,</b>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <b>3</b>
+            </div>
+          </ion-col>
 
         </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Fail</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>1</b>
-                </div>
-            </ion-col>
+        <ion-row class="ami-table">
+          <ion-col>
+            <div>
+              <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s,</b>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <b>3</b>
+            </div>
+          </ion-col>
 
         </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
+        <ion-row class="ami-table">
+          <ion-col>
+            <div>
+              <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s,</b>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <b>3</b>
+            </div>
+          </ion-col>
 
         </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
+        <ion-row class="ami-table">
+          <ion-col>
+            <div>
+              <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s,</b>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <b>3</b>
+            </div>
+          </ion-col>
 
         </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
+        <ion-row class="ami-table">
+          <ion-col>
+            <div>
+              <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s,</b>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <b>3</b>
+            </div>
+          </ion-col>
 
         </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
+        <ion-row class="ami-table">
+          <ion-col>
+            <div>
+              <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s,</b>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <b>3</b>
+            </div>
+          </ion-col>
 
         </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
+        <ion-row class="ami-table">
+          <ion-col>
+            <div>
+              <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s,</b>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <b>3</b>
+            </div>
+          </ion-col>
 
         </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
-
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <b>Sad</b>
-                </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <b>6</b>
-                </div>
-            </ion-col>
+        <ion-row class="ami-table">
+          <ion-col>
+            <div>
+              <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s,</b>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <b>3</b>
+            </div>
+          </ion-col>
 
         </ion-row> -->
 
-    </ion-grid>
 
 
-    <ion-grid class="ami-bottom">
-        <ion-row>
-            <ion-col col-6><button ion-button block (click)="gotoHome()">Back to home page</button></ion-col>
-            <ion-col col-6><button ion-button block (click)="gotoWhyIGaveIn()">Why I gave in</button></ion-col>
-        </ion-row>
-    </ion-grid>
+      </ion-grid>
+  </div>
+
+
+ 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid class="ami-bottom" style="background-color: white;padding-top: 0px; position: fixed !important;
+    bottom: 0px !important;">
+      <ion-row>
+        <ion-col col-6><button ion-button block (click)="gotoHome()">Back to home page</button></ion-col>
+        <ion-col col-6><button ion-button block (click)="gotoWhyIGaveIn()">Why I gave in</button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

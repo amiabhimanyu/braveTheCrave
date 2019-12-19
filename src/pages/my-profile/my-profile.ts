@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, ToastController, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { MyStatsPage } from '../my-stats/my-stats';
 
 import moment from 'moment';
+import { Navbar } from 'ionic-angular';
 /**
  * Generated class for the MyProfilePage page.
  *
@@ -17,6 +18,7 @@ import moment from 'moment';
 })
 export class MyProfilePage {
 
+    @ViewChild(Navbar) navBar: Navbar;
     quitDate: any;
     reason: any;
     minDate:any;
@@ -55,6 +57,7 @@ export class MyProfilePage {
         // console.log(localStorage.getItem('quitDate'), date)
         this.quitDate = new Date(date).toISOString();
         // console.log(this.quitDate)
+        // this.setBackButtonAction();
     }
     gotohome() {
         this.navCtrl.setRoot(HomePage);
@@ -122,4 +125,10 @@ export class MyProfilePage {
             this.isInvalidDate = false;
         }
     }
+
+    // setBackButtonAction(){
+    //     this.navBar.backButtonClick = () => {
+    //         // this.navCtrl.setRoot(HomePage);
+    //     }
+    // }
 }

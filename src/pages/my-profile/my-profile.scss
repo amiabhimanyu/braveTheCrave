@@ -4,6 +4,10 @@ page-my-profile {
     //     font-size: 40px;
     //     padding: 10px 0px 20px 0px;
     // }
+    .scroll-content {
+        position: fixed !important;
+        overflow-y: hidden !important;
+      }
     .ami-write{
         font-size: 23px;
        

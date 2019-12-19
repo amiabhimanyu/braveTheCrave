@@ -5,40 +5,40 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title></ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title></ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h1 class="ami-heading">Why did you give in?</h1>
-  <ion-item>
-    <ion-textarea placeholder="Enter reason..." [(ngModel)]="inputReason" (ngModelChange)="checkValid()"></ion-textarea>
-  </ion-item>
-  <div *ngIf="isInvalid" class="invalid">Invalid input</div>
-  <button class="submit-btn" ion-button block (click)="submitReason()">Submit</button>
-  <!-- <p class="ami-para">This won't be easy. <br> Dont let a minor slip stop you from becoming vape free.<br>Continue persevering.</p> -->
+    <h1 class="ami-heading">Why did you give in?</h1>
+    <ion-item>
+        <ion-textarea placeholder="Enter reason..." [(ngModel)]="inputReason" (ngModelChange)="checkValid()">
+        </ion-textarea>
+    </ion-item>
+    <div *ngIf="isInvalid" class="invalid">Please enter a reason</div>
+    <button class="submit-btn" ion-button block (click)="submitReason()">Submit</button>
+    <!-- <p class="ami-para">This won't be easy. <br> Dont let a minor slip stop you from becoming vape free.<br>Continue persevering.</p> -->
 
-  <p class="ami-para">This won't be easy. <br> Dont let a minor slip stop you.<br>Continue persevering.</p>
+    <p class="ami-para">This won't be easy. <br> Dont let a minor slip stop you.<br>Continue persevering.</p>
 
-  <!-- <h4>Keep in mind</h4> -->
-  <div style="
-    text-align: center;
-    margin-bottom: 40px;
-"><img alt="" src="../../assets/imgs/keep.png" style="
-    width: 70%;
-    text-align: center;
-"></div>
-  <h4>{{keepMind}}</h4>
-  <ion-grid class="ami-bottom">
-    <ion-row>
-      <ion-col col-12><button style="position: relative !important;" ion-button block (click)="gotoHome()">Back to home
-          page</button></ion-col>
+    <!-- <h4>Keep in mind</h4> -->
+    <!-- <div style="text-align: center; margin-bottom: 40px;"> -->
+    <div style="text-align: center;">
+        <img alt="" src="../../assets/imgs/keep.png" style="width: 70%; text-align: center;">
+    </div>
+    <h4>{{keepMind}}</h4>
+    <!-- <h4>Lorem ipsum dummy text</h4> -->
+    <ion-grid class="ami-bottom">
+        <ion-row>
+            <ion-col col-12><button style="position: relative !important;" ion-button block (click)="gotoHome()">Back to
+                    home
+                    page</button></ion-col>
 
-    </ion-row>
-  </ion-grid>
+        </ion-row>
+    </ion-grid>
 
-  <!-- <button class="ami-bottom" ion-button block (click)="gotoHome()">Back to home page</button> -->
+    <!-- <button class="ami-bottom" ion-button block (click)="gotoHome()">Back to home page</button> -->
 </ion-content>
 
 <!-- <ion-footer>
